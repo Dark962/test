@@ -3,9 +3,9 @@
 Durant les 6 séances restantes de TD/TP de la matière Méthodologie de Proiduction d'Applications vous allez :
 - utiliser Git (partage de code à plusieurs) - séance 1
 - Planifier et suivre le développement d'un projet en méthode agile Scrum avec GitLab - séance 2
-- Tester votre programme (tests unitraires et tests de couverture de code) - séance 3 et 4
-- Utiliser des techniques d'intégration continue
-- Amélioration de la qualité de vos projets
+- Tester votre programme (tests unitraires et tests de couverture de code) - séances 3 et 4
+- Utiliser des techniques d'intégration continue - séance 5
+- Amélioration de la qualité de vos projets - séance 6
 
 # Séance 1 : préparation du projet
 
@@ -121,6 +121,12 @@ git checkout nomBranche	Se déplace vers la branche de nom nomBranche
 
 git merge nomBranche	Créé une branche de nom nomBranche
 
+## Evaluation de votre travail
+
+Indiquez dans le fichier partagé suivant l'adresse de votre projet sur Gitlab.
+
+Votre enseignant de TP vous fera un retour sur ce que vous avez fait.
+
 
 # Séance 2 : Planification de projets avec la méthode agile SCRUM
 
@@ -134,9 +140,10 @@ L’objectif du projet est développer un système de réservation qui n’est q
 Etablissez le contenu du backlog du produit, c'est-à-dire la liste des user stories (vous pouvez vous limiter au user stories les plus importantes).
 
 
-
 ## Question 3 : constitution du backlog ordonné
 Classez, en justifiant vos choix, les éléments du backlog du produit selon l’ordre dans lequel ils vont être développés.
+
+## Evaluation de votre travail
 
 # Séance 3 : spécifier les cas de tests fonctionnel
 
@@ -147,6 +154,8 @@ Identifiez les différentes conditions d'exécution du programme.
 
 ## Question 2
 Déduisez-en des cas de tests fonctionnels en utilisant une matrice de tests fonctionnels.
+
+## Evaluation de votre travail
 
 # Séance 4 : dévelopopement guidé par les tests
 Complélter la classe de test avec les tests fonctionnels de la question précédente
