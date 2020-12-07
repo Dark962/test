@@ -3,4 +3,4 @@
 
 ## 
 
-!(doc/voyage.png)
+!(../master/doc/voyage.png)
