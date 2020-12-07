@@ -1,0 +1,18 @@
+stages:
+  - build
+  - executableJar
+  
+buildAndUnitTesting:
+  image: openjdk:11-jdk
+  stage: build
+  script:
+    - chmod +x gradlew
+    - ./gradlew build
+   
+jar:
+  image: openjdk:8-jdk
+  stage: executableJar
+  script:
+    - chmod +x gradlew
+    - ./gradlew customFatJar
+ 
