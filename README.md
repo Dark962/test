@@ -1,9 +1,9 @@
 # voyageEnTrain
 
 Durant les 6 séances restantes de TD/TP de la matière Méthodologie de Proiduction d'Applications vous allez :
-- utiliser Git (partage de code à plusieurs)
-- Planifier et suivre le développement d'un projet en méthode agile Scrum avec GitLab
-- Tester votre programme (tests unitraires et tests de couverture de code)
+- utiliser Git (partage de code à plusieurs) - séance 1
+- Planifier et suivre le développement d'un projet en méthode agile Scrum avec GitLab - séance 2
+- Tester votre programme (tests unitraires et tests de couverture de code) - séance 3 et 4
 - Utiliser des techniques d'intégration continue
 - Amélioration de la qualité de vos projets
 
@@ -152,9 +152,11 @@ Déduisez-en des cas de tests fonctionnels en utilisant une matrice de tests fon
 Complélter la classe de test avec les tests fonctionnels de la question précédente
 
 
-# Séance 5 ; couverture de code / Livraison Continue
+## Couverture de code / Livraison Continue
 Vérifier la couverture de votre code par le programme de test.
 
 Modifiez votre code jusqu'à obtenir une couverture maximale
+
+# Séance 5 : livraison continu
 
 # Séance 6 : qualité logiciel
