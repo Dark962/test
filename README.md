@@ -19,7 +19,7 @@ Git est un logiciel de gestion de versions décentralisé : https://fr.wikipedia
 
 GitHub ou Gitlab (solution hébergée basée sur git) permettent aux développeurs de stocker et de partager, publiquement ou non, le code qu’ils créent.
 
-Dans la suite c'est Gitlb qui est utilisé.
+Dans la suite c'est Gitlab qui est utilisé.
 
 Le principe de git est que chaque développeur a sur sa machine une copie du code présent sur le serveur Gitlab Pour ce faire, il faut disposer sur sa machine d’un client git. Git peut être installé sur Windows, Linux ou Mac. Sur Windows il y a une version graphique mais il n’est pas recommandé de s’en servir car la version ligne de commande propose les mêmes commandes quel que soit le système. Ces commandes sont d'inspiration Unix (utiliser « ls » par exemple pour obtenir la liste des fichiers du dossier courant). Avant d’installer un client git sur votre machine, tester la présence de git via la commande git. Si git n’est pas installé suivez la procédure d’installation « Set up Git » : https://help.github.com/articles/set-up-git/#platform-all 
 Pour communiquer à partir de votre machine avec un projet qui est sur github, il vous faut un client git installé sur votre machine.
@@ -104,16 +104,22 @@ Ouvrez les fichiers en cause et voyez comment git a conservé les deux versions 
 ### Mémento git
 
 git clone https://github.com/charroux/jee	Télécharge le projet donné en adresse dans un nouveau dossier portant le nom du projet
+
 git add contenu	Ajoute au dépôt local git le contenu du dossier et du fichier précisé en argument
+
 git commit -a -m "commentaire"	Créé un nouvelle version de votre dépôt local git
+
 git push adresse-https-du-projet	Renvoi vers github votre projet
+
 git push adresse-https-du-projet brancheLocale:brancheDistante	Renvoi la branche locale de votre projet vers la branche distante sur github
+
 git branch 	Liste les branches sur votre machine
+
 git branch nomBranche	Créé une branche de nom nomBranche
- git checkout nomBranche	Se déplace vers la branche de nom nomBranche
+
+git checkout nomBranche	Se déplace vers la branche de nom nomBranche
+
 git merge nomBranche	Créé une branche de nom nomBranche
-
-
 
 
 # Séance 2 : Planification de projets avec la méthode agile SCRUM
