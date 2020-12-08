@@ -51,6 +51,10 @@ Démarrer une version récente d'Eclipse puis importer y le projet : Import -> G
 
 ## Uploader le projet de référence vers votre projet Gitlab
 
+git push --set-upstream https://gitlab.com/BenOrcha/nouveau
+
+
+
 ## Utiliser git
 
 ### Travailler sur la branche principale
