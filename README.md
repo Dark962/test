@@ -17,43 +17,47 @@ Créer des binômes. Les binômes seront conservés jusqu'à la fin des 6 séanc
 
 Git est un logiciel de gestion de versions décentralisé : https://fr.wikipedia.org/wiki/Git
 
-GitHub ou Gitlab (solution hébergée basée sur git) permettent aux développeurs de stocker et de partager, publiquement ou non, le code qu’ils créent.
+GitHub ou Gitlab (solutions hébergées basées sur git) permettent aux développeurs de stocker et de partager, publiquement ou non, le code qu’ils créent.
 
 Dans la suite c'est Gitlab qui est utilisé.
 
-Le principe de git est que chaque développeur a sur sa machine une copie du code présent sur le serveur Gitlab Pour ce faire, il faut disposer sur sa machine d’un client git. Git peut être installé sur Windows, Linux ou Mac. Sur Windows il y a une version graphique mais il n’est pas recommandé de s’en servir car la version ligne de commande propose les mêmes commandes quel que soit le système. Ces commandes sont d'inspiration Unix (utiliser « ls » par exemple pour obtenir la liste des fichiers du dossier courant). Avant d’installer un client git sur votre machine, tester la présence de git via la commande git. Si git n’est pas installé suivez la procédure d’installation « Set up Git » : https://help.github.com/articles/set-up-git/#platform-all 
-Pour communiquer à partir de votre machine avec un projet qui est sur github, il vous faut un client git installé sur votre machine.
+Commencer par vous créer un compte sur gitlab : https://gitlab.com/
 
-Si votre système d’exploitation est Linux ou apparenté (MacOS) git est en général installé par défaut. Pour le vérifier, ouvrez un terminal et tapez la commande git.
-Vous pouvez télécharger en installer git via le lien suivant :
-https://git-scm.com/downloads
+Mémoriser votre nom d'utilisateur et l'adresse mail que vous avez indiquée car vous en aurez besoin au paragraphe suivant.
+ 
+Le principe de git est que chaque développeur a sur sa machine une copie du code présent sur le serveur Gitlab Pour ce faire, il faut disposer sur sa machine d’un client git. Git peut être installé sur Windows, Linux ou Mac. Si votre système d’exploitation est Linux ou apparenté (MacOS), git est en général installé par défaut. Pour le vérifier, ouvrez un terminal et tapez la commande git. Si git n’est pas installé suivez la procédure suivante :
+- télécharger git: https://git-scm.com/downloads
+- définir le user name : git config --global user.name "Mona Lisa"
+- définir l'adresse mail : git config --global user.email "email@example.com"
+
 
 Git est utilisable de deux façons :
 -	Via une interface graphique
 -	Via un terminal en ligne de commande
 
-La deuxième façon est préférable car elle est absolument portable (vous pourrez utiliser les commandes git sur n’importe quel système). C’est cette façon qui est utilisée dans la suite de ce TP. C’est le mode Bash. Sous Windows, tapez git dans le menu démarrer et vous devriez pour choisir le mode bash.
+La deuxième façon est préférable car elle est absolument portable (vous pourrez utiliser les commandes git sur n’importe quel système). C’est cette façon qui est utilisée dans la suite de ce TP : c’est le mode Bash. Sous Windows, tapez git dans le menu démarrer et vous devriez pour choisir le mode bash.
 
 ## Télécharger et tester le projet de référence
 Tous les TP à suivre sont basés sur un projet de référence: https://gitlab.com/BenOrcha/voyageentrain
 
 Ce projet utilise la version 11 de Java JDK.
 
-Commencer par vérifier quelle est la version de Java sur votre machine. Dans une fenêtre de commande utiliser la commande : java -version
+Commencer par vérifier quelle est la version de Java sur votre machine. Dans une fenêtre de commande utilisez la commande : java -version
 
-Si besoin installer sur votre machine Java JDK 11 : https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
+Si besoin, installez sur votre machine Java JDK 11 : https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 
-Récupérer le projet sur votre machine via la commande : git clone https://gitlab.com/BenOrcha/voyageentrain
+Placez-vous dans un dossier où vous voulez placez le projet et récupérez le projet via la commande : git clone https://gitlab.com/BenOrcha/voyageentrain
 
-Cette commande va créer un dossier contenant le projet sur votre machine (à l'endroit où vous avez utilisé la commande git clone). 
+Cette commande va créer un dossier contenant le projet sur votre machine. 
  
-Démarrer une version récente d'Eclipse puis importer y le projet : Import -> Gradle -> Existing Gradle project 
+Démarrer une version récente d'Eclipse puis importez-y le projet : Import -> Gradle -> Existing Gradle project 
 
 ## Uploader le projet de référence vers votre projet Gitlab
+A présent vous dévez uploader ce projet vers votre compte gitlab afin de pouvoir le modifier de votre côté. Pour cela utilisez la commande :
 
 git push --set-upstream https://gitlab.com/BenOrcha/nouveau
 
-
+où BenOrcha est l'url de votre compte gitlab et nouveau est le nom du projet que vous voulez créer dans gitlab. 
 
 ## Utiliser git
 
