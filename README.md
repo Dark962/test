@@ -1,11 +1,11 @@
 # voyageEnTrain
 
-Durant les 6 séances restantes de TD/TP de la matière Méthodologie de Proiduction d'Applications vous allez :
+Durant les 6 séances restantes de TD/TP de la matière Méthodologie de Production d'Applications vous allez :
 - utiliser Git (partage de code à plusieurs) - séance 1
 - Planifier et suivre le développement d'un projet en méthode agile Scrum avec GitLab - séance 2
 - Tester votre programme (tests unitraires et tests de couverture de code) - séances 3 et 4
 - Utiliser des techniques d'intégration continue - séance 5
-- Amélioration de la qualité de vos projets - séance 6
+- Amélioration de la qualité de votre projet - séance 6
 
 # Séance 1 : préparation du projet
 
@@ -58,6 +58,10 @@ A présent vous dévez uploader ce projet vers votre compte gitlab afin de pouvo
 git push --set-upstream https://gitlab.com/BenOrcha/nouveau
 
 où BenOrcha est l'url de votre compte gitlab et nouveau est le nom du projet que vous voulez créer dans gitlab. 
+
+## Permettre à des collaborateurs d'accéder à votre projet
+A présent vous devez ajouter votre binôme dans le projet gitlab ainsi que le professeur qui vous suit.
+Pour cela accéder à menu members dans gitlab et ajouter votre binôme en tant que Maintainer (role permission) et votre professeur en tant que reporter.
 
 ## Utiliser git
 
