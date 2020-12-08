@@ -50,7 +50,7 @@ Placez-vous alors dans un dossier où vous voulez placer le projet et récupére
 
 git clone https://gitlab.com/BenOrcha/voyageentrain
 
-Cette commande va créer un dossier contenant le projet sur votre machine. 
+Cette commande va créer un dossier contenant le projet sur votre machine. Déplacez vous dans ce dossier avant d'utiliser les autres commandes git.
  
 Démarrer une version récente d'Eclipse puis importez-y le projet : Import -> Gradle -> Existing Gradle project 
 
@@ -66,29 +66,30 @@ A présent vous devez ajouter votre binôme dans le projet gitlab ainsi que le p
 Pour cela accéder à menu members dans gitlab et ajouter votre binôme en tant que Maintainer (role permission) et votre professeur en tant que reporter.
 
 ## Utiliser git
+Dans la suite de ce TP vous allez utiliser git. Vous avez à votre disposition (voir plus bas) un memento des commandes git.
 
 ### Travailler sur la branche principale
 
-Créer dans le dossier src/main/java/transport/voyageEnTrain un fichier appelé Personne.java.
+Créer, sous Eclipse dans le dossier src/main/java/transport/voyageEnTrain, un fichier appelé Personne.java.
 
 Ajoutez-y une classe Personne.
 
-Comment indiquer à git de prendre en compte de fichier ?
+Comment indiquer à git de prendre en compte ce fichier ?
 
-Éditer ce fichier à nouveau (ajouter par exemple une méthode à la classe).
+Éditer ce fichier à nouveau (ajoutez par exemple une méthode à la classe).
 
 Comment indiquer à git de conserve les différentes versions de vos fichiers ?
 
 Comment renvoyer vers le serveur git votre fichier ?
 
-Créer à présent un nouveau dossier dans le dossier du projet et ajoutez-y un fichier.
+Créer à présent un nouveau dossier dans le dossier doc du projet et ajoutez-y un fichier.
 
 Comment indiquer à git de prendre en compte le contenu de ce dossier ?
 
 ### Créer des branches
 Il est plus judicieux si on travaille à plusieurs sur le même projet que chaque développeur travaille sur une fonctionnalité du projet. Dans ce cas, git préconise d’utiliser des branches.
 
-Comment créer une branche dans votre dossier de projet ?
+Comment créer une branche dans votre dossier local de projet ?
 
 Comment lister les branches sur votre machine ?
 
@@ -112,7 +113,7 @@ Mais cette fois éditer des fichiers existants dans cette branche.
 
 Revenez vers la branche principale (sans avoir oublié de faire des commit au préalable) et tentez de fusionner les branches. Que constatez-vous ?
 
-Ouvrez les fichiers en cause et voyez comment git a conservé les deux versions de vos fichiers. Choisissez quelle version vous voulez conserver. Faites un commit et tentez à nouveau la fusion (ça devrait marcher).
+Ouvrez les fichiers en cause et voyez comment git a conservé les deux versions de vos fichiers. Choisissez quelle version vous voulez conserver. Faites un commit et tentez à nouveau la fusion (ça devrait marcher !).
 
 
 ### Mémento git
