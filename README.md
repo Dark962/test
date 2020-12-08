@@ -8,6 +8,8 @@ Durant les 6 séances restantes de TD/TP de la matière Méthodologie de Product
 - Amélioration de la qualité de votre projet - séance 6
 
 # Séance 1 : préparation du projet
+Attention ! Si lors du cours vous avez déjà récupéré le projet de référence, le code de ce projet a pu être mis à jour entre temps. Dans ce cas replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain
+
 
 ## Répartition du travail
 
