@@ -27,15 +27,15 @@ Mémoriser votre nom d'utilisateur et l'adresse mail que vous avez indiquée car
  
 Le principe de git est que chaque développeur a sur sa machine une copie du code présent sur le serveur Gitlab Pour ce faire, il faut disposer sur sa machine d’un client git. Git peut être installé sur Windows, Linux ou Mac. Si votre système d’exploitation est Linux ou apparenté (MacOS), git est en général installé par défaut. Pour le vérifier, ouvrez un terminal et tapez la commande git. Si git n’est pas installé suivez la procédure suivante :
 - télécharger git: https://git-scm.com/downloads
-- définir le user name : git config --global user.name "Mona Lisa"
-- définir l'adresse mail : git config --global user.email "email@example.com"
+- définir le user name : git config --global user.name "Mona Lisa" ou user.name est celui de gitlab
+- définir l'adresse mail : git config --global user.email "email@example.com" ou user.email est celui de gitlab
 
 
 Git est utilisable de deux façons :
 -	Via une interface graphique
 -	Via un terminal en ligne de commande
 
-La deuxième façon est préférable car elle est absolument portable (vous pourrez utiliser les commandes git sur n’importe quel système). C’est cette façon qui est utilisée dans la suite de ce TP : c’est le mode Bash. Sous Windows, tapez git dans le menu démarrer et vous devriez pour choisir le mode bash.
+La deuxième façon est préférable car elle est absolument portable (vous pourrez utiliser les commandes git sur n’importe quel système). C’est cette façon qui est utilisée dans la suite de ce TP : c’est le mode Bash. Sous Windows, tapez git dans le menu démarrer et vous devriez pour choisir le mode bash. Sous Linux ou MacOS vous aurez accès à la commande git depuis tous les terminaux.
 
 ## Télécharger et tester le projet de référence
 Tous les TP à suivre sont basés sur un projet de référence: https://gitlab.com/BenOrcha/voyageentrain
@@ -46,7 +46,9 @@ Commencer par vérifier quelle est la version de Java sur votre machine. Dans un
 
 Si besoin, installez sur votre machine Java JDK 11 : https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 
-Placez-vous dans un dossier où vous voulez placez le projet et récupérez le projet via la commande : git clone https://gitlab.com/BenOrcha/voyageentrain
+Placez-vous alors dans un dossier où vous voulez placer le projet et récupérez-le via la commande : 
+
+git clone https://gitlab.com/BenOrcha/voyageentrain
 
 Cette commande va créer un dossier contenant le projet sur votre machine. 
  
