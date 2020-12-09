@@ -188,9 +188,9 @@ Donnez une estimation de la durée du projet prévue. Pour cela :
 
 - calculer la somme des poids des user stories
 - estimez la capacité initiale de votre équipe (le nombre de poids que vous vous sentez capable en tant qu'équipe de réaliser pendant 1 sprint (1 mois ici)))
-- diviser le poids total des user stories par la capacité et vous obtennez ainsi un nombre de sprints que vous pouvez convertir en mois (facile non?)
+- diviser le poids total des user stories par la capacité et vous obtennez ainsi un nombre de sprints que vous pouvez convertir en mois (facile non ?)
 
-Détailler tout vos calculs dans la page ReadMe de votre projet 
+Détailler tous vos calculs dans la page ReadMe de votre projet 
 
 # Séance 3 : spécifier les cas de tests fonctionnel
 
