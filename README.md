@@ -159,10 +159,36 @@ Déduire de l'interfaceles ci-dessus les fonctionnalités essentielles à dével
 On peut voir la liste des User Stories : https://gitlab.com/BenOrcha/voyageentrain/-/issues
 
 
-## Question 3 : constitution du backlog ordonnés
-Classez, en justifiant vos choix, les éléments du backlog du produit selon l’ordre dans lequel ils vont être développés. La justification peut se mettre en tant que commentaire dans un issue.
+## Question 2 : constitution du backlog ordonnés
+Classez, en justifiant vos choix, les éléments du backlog du produit selon l’ordre dans lequel ils vont être développés.
 
 La vue board des issues de gitlab vous permet de classer les user stories : https://gitlab.com/BenOrcha/voyageentrain/-/boards
+
+Justifiez vos choix dans la page d'accueil de votre projet (le fchier ReadMe présent à la raçinne du projet). Attention ! Si vous éditer le fichier ReadMe directement dans gitlab, vous ne pourrez plus faire de push sans avoir fait un pull au préalable (en effet le fichier ReadMe sur gitlab sera plus récent que celui sur votre machine et git vous demanderra de télécharger via un pull la dernière version). Pour éviter cela vous pouvez éditer le fichier ReadMe dans Eclipse (placez-vous dans l'onglet Mardown source plutôt de Preview de l'éditeur), faire un gt commit et un git push pour uploader le fichier ReadMe vers gitlab.u
+
+## Question 3 : estimation du backlog du produit.
+En prenant comme référence une des stories, estimer le poids de chaque story du backlog.
+
+La poids d'une story dans la méthode agile Scrum mesure le degré de difficulté de réalisation de la story. C'est un nombre sans unité sur une échelle ouverte. Ce qui compte au final c'est le poids relatif des stories entre-elles. Ainsi une story qui pèse 20 et deux fois plus compliquée à réaliser d'une story qui pèse 10.
+
+Dans gitlab, le poids apparaît dans la liste des issues (5 ici) : https://gitlab.com/BenOrcha/voyageentrain/-/issues
+
+Vous pouvez chnager ce poids en éditant la story. 
+
+## Question 4 : estimation de la date de terminaison du projet
+On suppose que le développement est confié à une équipe de 4 d’étudiants de DUT d’informatique 2ième année en stage, et que les technologies utilisées sont des technologies enseignées telles que PHP.
+
+De plus on fixe la durée d’un sprint à 1 mois (un sprint est un mini projet pour la méthode Scrum et le projet complet est découpé en sprints).
+
+Dans gitlab, les fins des sprints sont matérialisées par des millestones. Dans le projet de référence, deux millestones ont été créés : https://gitlab.com/BenOrcha/voyageentrain/-/milestones
+
+Vous pouvez voir que la user story 1 a été affectée au millestone Sprint 1.
+
+Donnez une estimation de la durée du projet prévue. Pour cela : 
+
+- calculer la somme des poids des user stories
+- estimez le nombre de poids que vous vous sentez capable en tant qu'équipe de réaliser pendant 1 sprint (1 mois ici)
+- diviser le poids total des user stories par le 
 
 ## Evaluation de votre travail
 
