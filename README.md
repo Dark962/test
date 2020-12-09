@@ -152,14 +152,19 @@ Soit la copie d’écran d’une maquette d’une application de réservation de
 
 ![](doc/voyage.png "bla")
 
-L’objectif du projet est développer un système de réservation qui n’est qu’une maquette (où les réservations sont uniquement simulées dans le système à développer). Il n’y a pas d’impression des billets de train. De plus, le système travaille sur un jeu de données réelles mais limité. Dans ces conditions, l’objectif du projet est de présenter à la direction de la société de transport un prototype émulant de façon réaliste mais limité un système de réservation. Ce prototype devant servir à la direction à décider si elle donne son accord pour lancer le développement du système réel ou si le projet est abandonné.
 
 ## Question 1 : constitution du backlog du produit.
-Etablissez le contenu du backlog du produit, c'est-à-dire la liste des user stories (vous pouvez vous limiter au user stories les plus importantes).
+Déduire de l'interfaceles ci-dessus fonctionnalités essentielles à développer. Consigner chaque fonctionnalité sous la forme d'une User Story. Pour vous aider, une première User Story a été créée dans le projet de référence : https://gitlab.com/BenOrcha/voyageentrain/-/issues/1
+
+Dans gitlab les User Stories sont appelées des Issues.
+
+On peut voir la liste des User Stories : https://gitlab.com/BenOrcha/voyageentrain/-/issues
 
 
-## Question 3 : constitution du backlog ordonné
-Classez, en justifiant vos choix, les éléments du backlog du produit selon l’ordre dans lequel ils vont être développés.
+## Question 3 : constitution du backlog ordonnés
+Classez, en justifiant vos choix, les éléments du backlog du produit selon l’ordre dans lequel ils vont être développés. La justification peut se mettre en tant que commentaire dans un issue.
+
+La vue board des issues de gitlab vous permet de classer les user stories : https://gitlab.com/BenOrcha/voyageentrain/-/boards
 
 ## Evaluation de votre travail
 
