@@ -158,6 +158,8 @@ Déduire de l'interfaceles ci-dessus les fonctionnalités essentielles à dével
 
 On peut voir la liste des User Stories : https://gitlab.com/BenOrcha/voyageentrain/-/issues
 
+Dans cette liste il y a 1 user story et 2 issues, mais pour l'instant on ne s'occupe pas des deux issues.
+
 
 ## Question 2 : constitution du backlog ordonnés
 Classez, en justifiant vos choix, les éléments du backlog du produit selon l’ordre dans lequel ils vont être développés.
@@ -191,6 +193,14 @@ Donnez une estimation de la durée du projet prévue. Pour cela :
 - diviser le poids total des user stories par la capacité et vous obtennez ainsi un nombre de sprints que vous pouvez convertir en mois (facile non ?)
 
 Détailler tous vos calculs dans la page ReadMe de votre projet. 
+
+## Question 5 : planification d’un sprint
+Au début de chaque sprint a lieu une réunion de planification du sprint. Le but est de découper les users stories qui doivent être réalisées durant le sprint en tâches, puis l’équipe de projet se répartie les tâches entre ses membres.
+
+Dans le projet de référence (https://gitlab.com/BenOrcha/voyageentrain/-/issues), il y a deux issues ("Concevoir l'interface les tables de la base de données" et "Concevoir l'interface utilisateur") qui sont en fait des tâches à réaliser pour la user story "En tant qu’utilisateur non inscrit je veux créer un compte afin de réserver des places de train pour un voyage et de faciliter mes réservations futures". Pour gitlab tout est des issues (il y a aussi le notion d'incident mais ça corespond à la notion de bug). Pour associer des tâches à une user story on peut leuf affecter le même label (le label rouge "user story 1" ici).
+
+Décomposer en tâches la première user story à réaliser dans votre projet.
+
 
 # Séance 3 : spécifier les cas de tests fonctionnel
 
