@@ -67,8 +67,12 @@ où BenOrcha est l'url de votre compte gitlab et nouveau est le nom du projet qu
 A présent vous devez ajouter votre binôme dans le projet gitlab ainsi que le professeur qui vous suit.
 Pour cela accéder à menu members dans gitlab et ajouter votre binôme en tant que Maintainer (role permission) et votre professeur en tant que reporter.
 
-Pour que votre enseignant puisse facilement vous associer à votre projet merci de renseigner dans ces documents l'adresse de votre projet gitlab (chaque étudiant de chaque binôme indique l'adresse du projet commun au binôme) : https://drive.google.com/drive/folders/105n1aZyb31N0i2cabFU4eiv6qtOiiOi1?usp=sharing
-
+Pour que votre enseignant puisse facilement vous associer à votre projet merci de renseigner dans ces documents l'adresse de votre projet gitlab (chaque étudiant de chaque binôme indique l'adresse du projet commun au binôme) : 
+- groupe jaune : https://drive.google.com/file/d/1CjePfD1pQh7Aubo-PBU6_ObIVDN7-ygH/view?usp=sharing
+- groupoe vert : https://drive.google.com/file/d/1SdFMUew2HAnq4Q52mDUxwiuN85KWAJuy/view?usp=sharing
+- groupe bleu : https://drive.google.com/file/d/1SBcued4m-wlt7U5IszTWkXWxIHcsMhql/view?usp=sharing
+- groupe rouge : https://drive.google.com/file/d/1KayPdlAo79KPXDPkpQCVfv6xnxDa1pWv/view?usp=sharing
+- groupe orange : https://drive.google.com/file/d/1wXdon2_kqqfchqiB5l6jfwEqAOitnlTA/view?usp=sharing
 
 ## Utiliser git
 Dans la suite de ce TP vous allez utiliser git. Vous avez à votre disposition (voir plus bas) un memento des commandes git.
