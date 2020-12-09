@@ -154,9 +154,7 @@ Soit la copie d’écran d’une maquette d’une application de réservation de
 
 
 ## Question 1 : constitution du backlog du produit.
-Déduire de l'interfaceles ci-dessus fonctionnalités essentielles à développer. Consigner chaque fonctionnalité sous la forme d'une User Story. Pour vous aider, une première User Story a été créée dans le projet de référence : https://gitlab.com/BenOrcha/voyageentrain/-/issues/1
-
-Dans gitlab les User Stories sont appelées des Issues.
+Déduire de l'interfaceles ci-dessus les fonctionnalités essentielles à développer. Consignez chaque fonctionnalité sous la forme d'une User Story. Pour vous aider, une première User Story a été créée dans le projet de référence : https://gitlab.com/BenOrcha/voyageentrain/-/issues/1 (dans gitlab les User Stories sont appelées des Issues).
 
 On peut voir la liste des User Stories : https://gitlab.com/BenOrcha/voyageentrain/-/issues
 
