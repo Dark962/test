@@ -164,7 +164,7 @@ Classez, en justifiant vos choix, les éléments du backlog du produit selon l�
 
 La vue board des issues de gitlab vous permet de classer les user stories : https://gitlab.com/BenOrcha/voyageentrain/-/boards
 
-Justifiez vos choix dans la page d'accueil de votre projet (le fchier ReadMe présent à la raçinne du projet). Attention ! Si vous éditer le fichier ReadMe directement dans gitlab, vous ne pourrez plus faire de push sans avoir fait un pull au préalable (en effet le fichier ReadMe sur gitlab sera plus récent que celui sur votre machine et git vous demanderra de télécharger via un pull la dernière version). Pour éviter cela vous pouvez éditer le fichier ReadMe dans Eclipse (placez-vous dans l'onglet Mardown source plutôt de Preview de l'éditeur), faire un gt commit et un git push pour uploader le fichier ReadMe vers gitlab.u
+Justifiez vos choix dans la page d'accueil de votre projet (le fchier ReadMe présent à la racinne du projet). Attention ! Si vous éditez le fichier ReadMe directement dans gitlab, vous ne pourrez plus faire de push sans avoir fait un pull au préalable (en effet le fichier ReadMe sur gitlab sera plus récent que celui sur votre machine et git vous demanderra de télécharger via un pull la dernière version). Pour éviter cela vous pouvez éditer le fichier ReadMe dans Eclipse (placez-vous dans l'onglet Mardown source plutôt de Preview de l'éditeur), faire un git commit et un git push pour uploader le fichier ReadMe vers gitlab.u
 
 ## Question 3 : estimation du backlog du produit.
 En prenant comme référence une des stories, estimer le poids de chaque story du backlog.
@@ -173,7 +173,7 @@ La poids d'une story dans la méthode agile Scrum mesure le degré de difficult�
 
 Dans gitlab, le poids apparaît dans la liste des issues (5 ici) : https://gitlab.com/BenOrcha/voyageentrain/-/issues
 
-Vous pouvez chnager ce poids en éditant la story. 
+Vous pouvez changer ce poids en éditant la story. 
 
 ## Question 4 : estimation de la date de terminaison du projet
 On suppose que le développement est confié à une équipe de 4 d’étudiants de DUT d’informatique 2ième année en stage, et que les technologies utilisées sont des technologies enseignées telles que PHP.
@@ -182,15 +182,15 @@ De plus on fixe la durée d’un sprint à 1 mois (un sprint est un mini projet 
 
 Dans gitlab, les fins des sprints sont matérialisées par des millestones. Dans le projet de référence, deux millestones ont été créés : https://gitlab.com/BenOrcha/voyageentrain/-/milestones
 
-Vous pouvez voir que la user story 1 a été affectée au millestone Sprint 1.
+Vous pouvez voir que la user story 1 a été affectée au millestone Sprint 1. Crééez ainsi vos millestones dans votre projet./.
 
 Donnez une estimation de la durée du projet prévue. Pour cela : 
 
 - calculer la somme des poids des user stories
-- estimez le nombre de poids que vous vous sentez capable en tant qu'équipe de réaliser pendant 1 sprint (1 mois ici)
-- diviser le poids total des user stories par le 
+- estimez la capacité initiale de votre équipe (le nombre de poids que vous vous sentez capable en tant qu'équipe de réaliser pendant 1 sprint (1 mois ici)))
+- diviser le poids total des user stories par la capacité et vous obtennez ainsi un nombre de sprints que vous pouvez convertir en mois (facile non?)
 
-## Evaluation de votre travail
+Détailler tout vos calculs dans la page ReadMe de votre projet 
 
 # Séance 3 : spécifier les cas de tests fonctionnel
 
