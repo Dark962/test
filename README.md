@@ -67,6 +67,9 @@ où BenOrcha est l'url de votre compte gitlab et nouveau est le nom du projet qu
 A présent vous devez ajouter votre binôme dans le projet gitlab ainsi que le professeur qui vous suit.
 Pour cela accéder à menu members dans gitlab et ajouter votre binôme en tant que Maintainer (role permission) et votre professeur en tant que reporter.
 
+Pour que votre enseignant puisse facilement vous associer à votre projet merci de renseigner dans ces documents l'adresse de votre projet gitlab (chaque étudiant de chaque binôme indique l'adresse du projet commun au binôme) : https://drive.google.com/drive/folders/105n1aZyb31N0i2cabFU4eiv6qtOiiOi1?usp=sharing
+
+
 ## Utiliser git
 Dans la suite de ce TP vous allez utiliser git. Vous avez à votre disposition (voir plus bas) un memento des commandes git.
 
@@ -137,12 +140,6 @@ git branch nomBranche	Créé une branche de nom nomBranche
 git checkout nomBranche	Se déplace vers la branche de nom nomBranche
 
 git merge nomBranche	Créé une branche de nom nomBranche
-
-## Evaluation de votre travail
-
-Indiquez dans le fichier partagé suivant l'adresse de votre projet sur Gitlab.
-
-Votre enseignant de TP vous fera un retour sur ce que vous avez fait.
 
 
 # Séance 2 : Planification de projets avec la méthode agile SCRUM
