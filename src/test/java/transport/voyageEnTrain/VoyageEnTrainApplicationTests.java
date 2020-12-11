@@ -12,7 +12,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 @SpringBootTest
@@ -48,11 +50,31 @@ class VoyageEnTrainApplicationTests {
 			if(i == listeTrains.size()) {
 				fail("Date départ non trouvée");
 			}
+			Train train = listeTrains.get(i);
+			Date date = train.getDateDArrivee();
+			SimpleDateFormat df = new SimpleDateFormat("hh:mm dd/MM/yy");
+			assertTrue(date.compareTo(df.parse("10:18 02/01/2021")) == 0);
+			assertEquals(train.getLieuDeDepart(), "Ici c'est Paris");
+			assertEquals(train.getLieuDArrivee(), "Marseille");
 		} catch (ParseException e) {
 			fail("Erreur parsage date");
 		}
 	}
 	
-	
+	@Test
+	void ordreDesDates() {
+		ArrayList<String> gares = trains.listeDesGares();
+		assertNotNull(gares);
+		ArrayList<Train> listeTrains;
+		for(String gare: gares) {
+			listeTrains = trains.chercherParLieuDeDepart(gare);
+			assertNotNull(listeTrains);
+			for(Train train: listeTrains) {
+				System.out.println(train.getDateDeDepart());
+				System.out.println(train.getDateDArrivee());
+				assertTrue(train.getDateDeDepart().compareTo(train.getDateDArrivee()) < 0);
+			}
+		}	
+	}
 
 }
