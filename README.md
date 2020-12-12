@@ -203,6 +203,7 @@ Décomposer en tâches la première user story à réaliser dans votre projet.
 
 
 # Séance 3 : spécifier les cas de tests fonctionnel
+Attention ! Si lors des séances précédentes vous avez déjà récupéré le projet de référence, le code de ce projet a pu être mis à jour entre temps. Dans ce cas replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain
 
 Dans la suite on se focalise sur la User Story : En tant qu’utilisateur, je veux choisir les dates ainsi que les lieux de départ et d’arrivée de mon voyage afin de déterminer une liste de train qui respectent au mieux mes choix.
 
@@ -259,12 +260,15 @@ On voit dans la matrice que toutes les conditions sur les entrées sont à vrai,
 
 Afin de trouver tous les autres cas de tests il faut considérer toutes les combinaisons possibles de vrai/faux dans la matrice de test.
  
-## Question 1
+## Question
 Ajoutez à la matrice de tests des nouvelles colonnes où chaque colonne contient un cas de test, jusqu'à ce que toutes les combinaisons possibles de vrai/faux ont été trouvées.
 
 ## Evaluation de votre travail
+Ajoutez votre matrice de tests à la page d'accueil ReadMe de votre projet gitlab.
 
-# Séance 4 : dévelopopement guidé par les tests
+# Séance 4 : développement guidé par les tests
+Attention ! Si lors du cours vous avez déjà récupéré le projet de référence, le code de ce projet a pu être mis à jour entre temps. Dans ce cas replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain
+
 Complélter la classe de test avec les tests fonctionnels de la question précédente
 
 
