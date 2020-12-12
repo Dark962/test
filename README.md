@@ -228,7 +228,7 @@ Cet fonction est définie dans le fichier : https://gitlab.com/BenOrcha/voyageen
 Cette fonctions comportent trois entrées :   
 - la ville de départ
 - la ville d'arrivée
-- la dae de départ
+- la date de départ
 
 Les conditions sur les entrées sont :
 - Ville départ différente ville arrivée
@@ -241,6 +241,19 @@ La matrice a été initialisée avec les valeurs :
 - la ville de départ : ici c'est Paris
 - la ville d'arrivée : Marseille
 - la dae de départ : 23:59 01/01/2021
+
+Ces valeurs sont tirées du constructeur de la classe Trains :
+    	
+    	public Trains(){
+        gares.add("Ici c'est Paris");
+        gares.add("Marseille");
+        gares.add("Lille");
+        gares.add("Lyon");
+        
+        try {
+			Train train = new Train(1, gares.get(0), gares.get(1), "23:59 01/01/2021", "10:18 02/01/2021");
+			trains.add(train);
+
 
 On voit dans la matrice que toutes les conditions sur les entrées sont à vrai, montrant dans ce cas, qu'un train existe pour les entrées choisies, le train numéro 1.
 
