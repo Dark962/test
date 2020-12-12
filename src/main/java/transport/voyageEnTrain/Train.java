@@ -9,9 +9,11 @@ public class Train {
 	String lieuDArrivee;
 	Date dateDeDepart;
 	Date dateDArrivee;
+	int numero;
 	
-	public Train(String lieuDeDepart, String lieuDArrivee, String dateDeDepart, String dateDArrivee) throws Exception {
+	public Train(int numero, String lieuDeDepart, String lieuDArrivee, String dateDeDepart, String dateDArrivee) throws Exception {
 		super();
+		this.numero = numero;
 		this.lieuDeDepart = lieuDeDepart;
 		this.lieuDArrivee = lieuDArrivee;
 		SimpleDateFormat df = new SimpleDateFormat("hh:mm dd/MM/yy");
@@ -50,6 +52,19 @@ public class Train {
 	public void setDateDArrivee(Date dateDArrivee) {
 		this.dateDArrivee = dateDArrivee;
 	}
-	
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	@Override
+	public String toString() {
+		return "Train [lieuDeDepart=" + lieuDeDepart + ", lieuDArrivee=" + lieuDArrivee + ", dateDeDepart="
+				+ dateDeDepart + ", dateDArrivee=" + dateDArrivee + ", numero=" + numero + "]";
+	}
 	
 }

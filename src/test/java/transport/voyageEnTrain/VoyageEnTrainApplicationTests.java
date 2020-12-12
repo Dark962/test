@@ -1,11 +1,9 @@
 package transport.voyageEnTrain;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -22,12 +20,10 @@ import static org.junit.jupiter.api.Assertions.fail;
 class VoyageEnTrainApplicationTests {
 
 	Trains trains;
-	SimpleDateFormat df;
 
 	@BeforeAll
 	void init(){
 		trains = new Trains();
-		df = new SimpleDateFormat("hh:mm dd/MM/yy");
 	}
 
 	@Test
@@ -37,11 +33,12 @@ class VoyageEnTrainApplicationTests {
 	}
 	
 	@Test
-	void chercheTrain(){
-		String villeDeDepart = trains.listeDesGares().get(0);
-		ArrayList<Train> listeTrains = trains.chercherParLieuDeDepart(villeDeDepart);
-		assertNotNull(listeTrains);
+	void chercheTrain(){	
 		try {
+			String villeDeDepart = trains.listeDesGares().get(0);
+			ArrayList<Train> listeTrains = trains.chercherTrainParLieuDeDepart(villeDeDepart);
+			assertNotNull(listeTrains);
+			SimpleDateFormat df = new SimpleDateFormat("hh:mm dd/MM/yy");
 			Date dateDepart = df.parse("23:59 01/01/2021");
 			int i = 0;
 			while(i<listeTrains.size() && listeTrains.get(i).getDateDeDepart().compareTo(dateDepart)!=0) {
@@ -52,12 +49,11 @@ class VoyageEnTrainApplicationTests {
 			}
 			Train train = listeTrains.get(i);
 			Date date = train.getDateDArrivee();
-			SimpleDateFormat df = new SimpleDateFormat("hh:mm dd/MM/yy");
 			assertTrue(date.compareTo(df.parse("10:18 02/01/2021")) == 0);
 			assertEquals(train.getLieuDeDepart(), "Ici c'est Paris");
 			assertEquals(train.getLieuDArrivee(), "Marseille");
-		} catch (ParseException e) {
-			fail("Erreur parsage date");
+		} catch (Exception e) {
+			fail("Erreur");
 		}
 	}
 	
@@ -67,14 +63,61 @@ class VoyageEnTrainApplicationTests {
 		assertNotNull(gares);
 		ArrayList<Train> listeTrains;
 		for(String gare: gares) {
-			listeTrains = trains.chercherParLieuDeDepart(gare);
+			try {
+				listeTrains = trains.chercherTrainParLieuDeDepart(gare);
+				assertNotNull(listeTrains);
+				for(Train train: listeTrains) {
+					assertTrue(train.getDateDeDepart().compareTo(train.getDateDArrivee()) < 0);
+				}
+			} catch(Exception e) {
+				fail("Gare null");
+			}
+
+		}	
+	}
+	
+	@Test
+	void garesParLieuDeDepart() {
+		try {
+			ArrayList<Train> listeTrains = trains.chercherTrainParLieuDeDepart("Ici c'est Paris");
 			assertNotNull(listeTrains);
 			for(Train train: listeTrains) {
-				System.out.println(train.getDateDeDepart());
-				System.out.println(train.getDateDArrivee());
-				assertTrue(train.getDateDeDepart().compareTo(train.getDateDArrivee()) < 0);
+				assertEquals(train.getLieuDeDepart(), "Ici c'est Paris");
 			}
-		}	
+		} catch(Exception e){
+			fail("Gare null");
+		}
+	}
+	
+	@Test
+	void garesParLieuDArrivee() {
+		try {
+			ArrayList<Train> listeTrains = trains.chercherTrainParLieuDArrivee("Ici c'est Paris");
+			assertNotNull(listeTrains);
+			for(Train train: listeTrains) {
+				assertEquals(train.getLieuDArrivee(), "Ici c'est Paris");
+			}
+		} catch(Exception e){
+			fail("Gare null");
+		}
+	}
+	
+	@Test
+	void gareDeDepartNulle() {
+		try {
+			trains.chercherTrainParLieuDeDepart(null);
+			fail("Exception attendue");
+		} catch(Exception e){
+		}
+	}
+	
+	@Test
+	void gareDArriveeNulle() {
+		try {
+			trains.chercherTrainParLieuDArrivee(null);
+			fail("Exception attendue");
+		} catch(Exception e){
+		}
 	}
 
 }

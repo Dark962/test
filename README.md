@@ -206,11 +206,46 @@ Décomposer en tâches la première user story à réaliser dans votre projet.
 
 Dans la suite on se focalise sur la User Story : En tant qu’utilisateur, je veux choisir les dates ainsi que les lieux de départ et d’arrivée de mon voyage afin de déterminer une liste de train qui respectent au mieux mes choix.
 
-## Question 1
-Identifiez les différentes conditions d'exécution du programme.
+Une matrice de tests permet de définir les cas de tests qui permettent de tester un logiciel. L'ébauche de la matrice de test est donnée ici : https://docs.google.com/spreadsheets/d/1oZHWEpirgwBhf3sFZpBLWzmgP4-DnTmQBHrMc8RlI7Q/edit?usp=sharing
 
-## Question 2
-Déduisez-en des cas de tests fonctionnels en utilisant une matrice de tests fonctionnels.
+Une matrice de tests contient, dans ses lignes des conditions sur les entrées du logiciel. Dans notre cas, la fonction qu'il implémente la user story est la fonction suivante:
+
+    /**
+     * Retourne la liste des trains ayant pour ville de départ nomVilleDeDepart, 
+     * pour ville d'arrivée nomVilleArrivee, 
+     * et qui partent après la date dateDeDepart
+     * @param nomVilleDeDepart
+     * @param nomVilleArrivee
+     * @param dateDeDepart au format hh:mm jj/mm/aaaa, exemple: "23:59 01/01/2021")
+     * @return
+     */
+    public ArrayList<Train> chercherTrain(String nomVilleDeDepart, String nomVilleArrivee, String dateDeDepart){
+    	return null;
+    }
+    
+Il y a trois entrée :   
+- la ville de départ
+- la ville d'arrivée
+- la dae de départ
+
+Les conditions sur les entrées sont :
+- Ville départ différente ville arrivée
+- Ville de départ élément des villes de départ
+- Ville d'arrivée élément des villes d'arrivée
+- Il existe un trajet entre les villes de départ et d'arrivée
+- La date de départ est inférieure à une des dates de la ville de départ
+
+La matrice a été initialisée avec les valeurs :
+- la ville de départ : ici c'est Paris
+- la ville d'arrivée : Marseille
+- la dae de départ : 23:59 01/01/2021
+
+On voit dans la matrice que toutes les conditions sur les entrées sont à vrai, montrant dans ce cas, qu'un train existe pour les entrées choisies, le train numéro 1.
+
+Afin de trouver tous les autres cas de tests il faut considérer toutes les combinaisons possibles de vrai/faux dans la matrice de test.
+ 
+## Question 1
+Ajoutez à la matrice de tests des nouvelles colonnes où chaque colonne contient un cas de test, jusqu'à ce que toutes les combinaisons possibles de vrai/faux ont été trouvées.
 
 ## Evaluation de votre travail
 
