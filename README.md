@@ -208,7 +208,7 @@ Dans la suite on se focalise sur la User Story : En tant qu’utilisateur, je ve
 
 Une matrice de tests permet de définir les cas de tests qui permettent de tester un logiciel. L'ébauche de la matrice de test est donnée ici : https://docs.google.com/spreadsheets/d/1oZHWEpirgwBhf3sFZpBLWzmgP4-DnTmQBHrMc8RlI7Q/edit?usp=sharing
 
-Une matrice de tests contient, dans ses lignes des conditions sur les entrées du logiciel. Dans notre cas, la fonction qu'il implémente la user story est la fonction suivante:
+Une matrice de tests contient, dans ses lignes des conditions sur les entrées du logiciel. Dans notre cas, la fonction qui implémente la user story est la fonction suivante:
 
     /**
      * Retourne la liste des trains ayant pour ville de départ nomVilleDeDepart, 
@@ -223,7 +223,9 @@ Une matrice de tests contient, dans ses lignes des conditions sur les entrées d
     	return null;
     }
     
-Il y a trois entrée :   
+Cet fonction est définie dans le fichier : https://gitlab.com/BenOrcha/voyageentrain/-/blob/master/src/main/java/transport/voyageEnTrain/Trains.java
+
+Cette fonctions comportent trois entrées :   
 - la ville de départ
 - la ville d'arrivée
 - la dae de départ
