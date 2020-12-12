@@ -86,9 +86,10 @@ public class Trains {
      * @param nomVilleDeDepart
      * @param nomVilleArrivee
      * @param dateDeDepart au format hh:mm jj/mm/aaaa, exemple: "23:59 01/01/2021")
-     * @return
+     * @throws Exception si un des paramètres est nul
+     * @return la liste des trains trouvées
      */
-    public ArrayList<Train> chercherTrain(String nomVilleDeDepart, String nomVilleArrivee, String dateDeDepart){
+    public ArrayList<Train> chercherTrain(String nomVilleDeDepart, String nomVilleArrivee, String dateDeDepart) throws Exception{
     	return null;
     }
 
