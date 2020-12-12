@@ -269,8 +269,51 @@ Ajoutez votre matrice de tests à la page d'accueil ReadMe de votre projet gitla
 # Séance 4 : développement guidé par les tests
 Attention ! Si lors du cours vous avez déjà récupéré le projet de référence, le code de ce projet a pu être mis à jour entre temps. Dans ce cas replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain
 
-Complélter la classe de test avec les tests fonctionnels de la question précédente
+Votre projet contient déjà une classe de tests : https://gitlab.com/BenOrcha/voyageentrain/-/blob/master/src/test/java/transport/voyageEnTrain/VoyageEnTrainApplicationTests.java
 
+Ce sont des tests unitaires à la norme JUnit.
+
+Pour déclencher les tests faites un clic droit sur votre projet dans Elipse, puis Run as -> JUnit test. Tous les tests passent correctement. Etudiez le programme de test
+
+## Question 1 : tests unitaires avec JUnit
+
+Complélter la classe de test avec les tests que vous avez définis dans la matrice de tests de la séance 4, puis implémenter la user story "En tant qu’utilisateur, je veux choisir les dates ainsi que les lieux de départ et d’arrivée de mon voyage afin de déterminer une liste de train qui respectent au mieux mes choix" dans la fonction 
+
+    /**
+     * Retourne la liste des trains ayant pour ville de départ nomVilleDeDepart, 
+     * pour ville d'arrivée nomVilleArrivee, 
+     * et qui partent après la date dateDeDepart
+     * @param nomVilleDeDepart
+     * @param nomVilleArrivee
+     * @param dateDeDepart au format hh:mm jj/mm/aaaa, exemple: "23:59 01/01/2021")
+     * @return
+     */
+    public ArrayList<Train> chercherTrain(String nomVilleDeDepart, String nomVilleArrivee, String dateDeDepart){
+    	return null;
+    }
+
+de la classe : https://gitlab.com/BenOrcha/voyageentrain/-/blob/master/src/main/java/transport/voyageEnTrain/Trains.java
+
+## Question 2 : couverture de code
+
+Votre code est composée d'intructions et il est important que toutes les instructions soient testées. On parle ici de couverture de code. Pour déclencher le test de couverure de code, faites un clic droit sur votre projet dans Eclipse puis, Coverage as -> JUnit test. Afficher ensuite votre classe Trains et vous verrez que Eclipse a colorié votre code :
+- en vert si votre programme de test a permit de tester une instruction
+- en rouge dans le cas contraire
+
+Ajouter des nouvelles méthodes à votre classe de test tant que toutes les instructions de la fonction suivante n'ont pas été couvertes :
+
+    /**
+     * Retourne la liste des trains ayant pour ville de départ nomVilleDeDepart, 
+     * pour ville d'arrivée nomVilleArrivee, 
+     * et qui partent après la date dateDeDepart
+     * @param nomVilleDeDepart
+     * @param nomVilleArrivee
+     * @param dateDeDepart au format hh:mm jj/mm/aaaa, exemple: "23:59 01/01/2021")
+     * @return
+     */
+    public ArrayList<Train> chercherTrain(String nomVilleDeDepart, String nomVilleArrivee, String dateDeDepart){
+    	return null;
+    }
 
 ## Couverture de code / Livraison Continue
 Vérifier la couverture de votre code par le programme de test.
