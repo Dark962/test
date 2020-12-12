@@ -277,7 +277,7 @@ Pour déclencher les tests faites un clic droit sur votre projet dans Elipse, pu
 
 ## Question 1 : tests unitaires avec JUnit
 
-Complélter la classe de test avec les tests que vous avez définis dans la matrice de tests de la séance 4, puis implémenter la user story "En tant qu’utilisateur, je veux choisir les dates ainsi que les lieux de départ et d’arrivée de mon voyage afin de déterminer une liste de train qui respectent au mieux mes choix" dans la fonction 
+Complélter la classe de test avec les tests que vous avez définis dans la matrice de tests de la séance 4, puis implémenter la user story "En tant qu’utilisateur, je veux choisir les dates ainsi que les lieux de départ et d’arrivée de mon voyage afin de déterminer une liste de train qui respectent au mieux mes choix" dans la fonction :
 
     /**
      * Retourne la liste des trains ayant pour ville de départ nomVilleDeDepart, 
@@ -314,12 +314,6 @@ Ajouter des nouvelles méthodes à votre classe de test tant que toutes les inst
     public ArrayList<Train> chercherTrain(String nomVilleDeDepart, String nomVilleArrivee, String dateDeDepart){
     	return null;
     }
-
-## Couverture de code / Livraison Continue
-Vérifier la couverture de votre code par le programme de test.
-
-Modifiez votre code jusqu'à obtenir une couverture maximale
-
 # Séance 5 : livraison continu
 
 # Séance 6 : qualité logiciel
