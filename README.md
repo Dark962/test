@@ -273,7 +273,20 @@ Votre projet contient déjà une classe de tests : https://gitlab.com/BenOrcha/v
 
 Ce sont des tests unitaires à la norme JUnit.
 
-Pour déclencher les tests faites un clic droit sur votre projet dans Elipse, puis Run as -> JUnit test. Tous les tests passent correctement. Etudiez le programme de test
+## Lancer le programme de test
+
+### En ligne de commande
+
+Ouvrez un terminal (un fenêtre de commande sous Windows) dans le dossier du projet (là où est le fichier gradlew) et tapez la commande :
+
+- sous Windows : gradlew build
+- sous Linux : ./gradlew build
+
+Un rapport de test a été généré dans le dossier build/reports/tests/test/index.html 
+
+### via Eclipse
+
+Faites un clic droit sur votre projet dans Elipse, puis Run as -> JUnit test. Vous pouvez à présent consulter le rapport de test dans Eclipse.
 
 ## Question 1 : tests unitaires avec JUnit
 
@@ -296,9 +309,28 @@ de la classe : https://gitlab.com/BenOrcha/voyageentrain/-/blob/master/src/main/
 
 ## Question 2 : couverture de code
 
-Votre code est composée d'intructions et il est important que toutes les instructions soient testées. On parle ici de couverture de code. Pour déclencher le test de couverure de code, faites un clic droit sur votre projet dans Eclipse puis, Coverage as -> JUnit test. Afficher ensuite votre classe Trains et vous verrez que Eclipse a colorié votre code :
+Votre code est composée d'intructions et il est important que toutes les instructions soient testées. On parle ici de couverture de code. 
+
+### Lancer les tests de couverture de code en ligne de commande
+
+Ouvrez un terminal (un fenêtre de commande sous Windows) dans le dossier du projet (là où est le fichier gradlew) et tapez la commande :
+
+- sous Windows : gradlew build jacocoTestReport
+- sous Linux : ./gradlew build jacocoTestReport
+
+Un rapport de test a été généré dans le dossier build/reports/jacoco/test/html/index.html 
+
+vous verrez que Jacoco a colorié votre code :
 - en vert si votre programme de test a permit de tester une instruction
 - en rouge dans le cas contraire
+
+### Lancer les tests de couverture de code via Eclipse
+
+Pour déclencher le test de couverure de code, faites un clic droit sur votre projet dans Eclipse puis, Coverage as -> JUnit test. Afficher ensuite votre classe Trains et vous verrez que Eclipse a colorié votre code :
+- en vert si votre programme de test a permit de tester une instruction
+- en rouge dans le cas contraire
+
+### Garantir la couveture de code
 
 Ajouter des nouvelles méthodes à votre classe de test tant que toutes les instructions de la fonction suivante n'ont pas été couvertes :
 
