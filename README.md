@@ -143,7 +143,7 @@ git branch nomBranche	Créé une branche de nom nomBranche
 
 git checkout nomBranche	Se déplace vers la branche de nom nomBranche
 
-git merge nomBranche	Créé une branche de nom nomBranche
+git merge nomBranche		Fusionne la branche nomBranche avec la branche sur laquelle on est
 
 
 # Séance 2 : Planification de projets avec la méthode agile SCRUM
