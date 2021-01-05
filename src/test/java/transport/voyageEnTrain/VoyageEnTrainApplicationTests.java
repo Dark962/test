@@ -119,5 +119,19 @@ class VoyageEnTrainApplicationTests {
 		} catch(Exception e){
 		}
 	}
+	
+	@Test
+	void test1() {
+		try {
+			ArrayList<Train> trainsTrouves = trains.chercherTrain("Ici c'est Paris", "Marseille", "23:50 01/01/2021");
+			assertTrue(trainsTrouves.size() == 2);
+			Train train = trainsTrouves.get(0);
+			assertTrue(train.getNumero() == 1);
+			train = trainsTrouves.get(1);
+			assertTrue(train.getNumero() == 2);
+		} catch(Exception e) {
+			fail("Exception non attendue");
+		}
+	}
 
 }
