@@ -120,6 +120,7 @@ class VoyageEnTrainApplicationTests {
 		}
 	}
 	
+	/* Code du test 1 de la matrice de test
 	@Test
 	void test1() {
 		try {
@@ -133,5 +134,6 @@ class VoyageEnTrainApplicationTests {
 			fail("Exception non attendue");
 		}
 	}
+	*/
 
 }

@@ -1,5 +1,6 @@
 package transport.voyageEnTrain;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -90,7 +91,20 @@ public class Trains {
      * @return la liste des trains trouvées
      */
     public ArrayList<Train> chercherTrain(String nomVilleDeDepart, String nomVilleArrivee, String dateDeDepart) throws Exception{
-    	return null;
+    	ArrayList<Train> trains = new ArrayList<Train>();
+    	Train train = new Train(1, gares.get(0), gares.get(1), "23:59 01/01/2021", "10:18 02/01/2021");
+		trains.add(train);
+		train = new Train(2, gares.get(0), gares.get(1), "01:14 02/01/2021", "22:25 02/01/2021");
+		trains.add(train);
+		
+		
+		SimpleDateFormat df = new SimpleDateFormat("hh:mm dd/MM/yy");
+		Date dateDepart = df.parse(dateDeDepart);
+		
+		trains.get(-1);
+		
+		
+    	return trains;
     }
 
 
