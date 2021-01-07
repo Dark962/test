@@ -346,6 +346,41 @@ Ajouter des nouvelles méthodes à votre classe de test tant que toutes les inst
     public ArrayList<Train> chercherTrain(String nomVilleDeDepart, String nomVilleArrivee, String dateDeDepart){
     	return null;
     }
-# Séance 5 : livraison continu
+# Séance 5 : qualité logiciel avec SonarQube
+Attention ! Cette partie nécessite que vous mettiez à jour votre projet car de nouvelles configurations ont été faites dans le projet de référence. Pour cela, replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain
 
-# Séance 6 : qualité logiciel
+Durant cette séance, vous allez utiliser SonarQube qui est un logiciel libre permettant de mesurer la qualité d'un code source en continu.
+
+## Installation de SonarQube
+Ici, c'est la version gratuite (Community) qui est utilisée.
+
+Télécharger et décompresser la version Community: https://www.sonarqube.org/downloads/
+
+La configuration la plus simple utilise la base de données H2. Pour activer cette configuration, ouvrez le fichier $SONARQUBE-HOME/conf/sonar.properties et décommenter la ligne:
+
+<code>
+sonar.embeddedDatabase.port=9092
+</code>
+
+## Lancement du serveur SonarQube
+Exécutez la commande suivante:
+
+- sous Linux: bin/linux-x86-64/sonar.sh start
+- sous macOS: bin/macosx-universal-64/sonar.sh start
+- sous Windows: bin/windows-x86-64/StartSonar.bat
+
+Vous pouvez accéder à l'interface Web de SonarQube via: http://localhost:9000
+
+Le login et password par défaut est admin.
+
+## Analyse d'un projet avec SonarQube
+Le projet Gradle que vous utilisez est déjà configuré pour fonctionner avec SonarQube. Il faut simplement que vous gériez l'authentification de votre projet Gradle aupèrs du serveur SonarQube.
+
+Commencez par générer un token d'authentification: https://docs.sonarqube.org/latest/user-guide/user-token/
+
+Puis ouvrez une fenêtre de commande dans le dossier de votre projet et exécutez la commande : 
+- sous Windows : gradlew sonarqube -Dsonar.login=yourAuthenticationToken 
+- sous Linux (ou Mac) : ./gradlew sonarqube -Dsonar.login=yourAuthenticationToken 
+
+Attendez la fin de l'exécution de la commande puis allez voir le résultats de l'analyse dans la page projets de SonarQube. 
+
