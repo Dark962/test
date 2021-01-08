@@ -91,7 +91,18 @@ public class Trains {
      * @return la liste des trains trouvées
      */
     public ArrayList<Train> chercherTrain(String nomVilleDeDepart, String nomVilleArrivee, String dateDeDepart) throws Exception{
-    	return null;
+    	
+    	ArrayList<Train> trainsTrouves = new ArrayList<Train>();
+    	
+    	SimpleDateFormat df = new SimpleDateFormat("hh:mm dd/MM/yy");
+		Date dateDep = df.parse(dateDeDepart);			// lance une exception si la date est au mauvais format
+		
+		Train train = trains.get(0);
+		if(train.getDateDeDepart().compareTo(dateDep) < 0){
+			trainsTrouves.add(train);
+		}
+		
+    	return trains;
     }
 
 
