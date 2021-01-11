@@ -347,7 +347,7 @@ Ajouter des nouvelles méthodes à votre classe de test tant que toutes les inst
     	return null;
     }
 # Séance 5 : qualité logiciel avec SonarQube
-Attention ! Cette partie nécessite que vous mettiez à jour votre projet car de nouvelles configurations ont été faites dans le projet de référence. Mais avant tout sauvegardez bien votre travail dans votre projet gitlab en faisant un git push de votre projet local vers votre projet gitlab afin d'y sauvegarder votre code. Ensuite vous pourrez récupérer la mise à jour d projet de référence. Pour cela, replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain. Attention, ce faisant vous récupérez aussi le code du projet de référence et il se peut que vos classes Trains et VoyageEnTrainApplicationTests aient été remplacées. Dans ce cas, vous devrez les remettre à jour en utilisant votre code de votre projet gitlab.
+Attention ! Cette partie nécessite que vous mettiez à jour votre projet car de nouvelles configurations ont été faites dans le projet de référence. Mais avant tout sauvegardez bien votre travail dans votre projet gitlab en faisant un git push de votre projet local vers votre projet gitlab afin d'y sauvegarder votre code. Ensuite vous pourrez récupérer la mise à jour du projet de référence. Pour cela, replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain. Attention, ce faisant vous récupérez aussi le code du projet de référence et il se peut que vos classes Trains et VoyageEnTrainApplicationTests aient été remplacées. Dans ce cas, vous devrez les remettre à jour en utilisant votre code de votre projet gitlab.
 
 Durant cette séance, vous allez utiliser SonarQube qui est un logiciel libre permettant de mesurer la qualité d'un code source en continu.
 
@@ -365,8 +365,8 @@ sonar.embeddedDatabase.port=9092
 ## Lancement du serveur SonarQube
 Exécutez la commande suivante:
 
-- sous Linux: bin/linux-x86-64/sonar.sh start
-- sous macOS: bin/macosx-universal-64/sonar.sh start
+- sous Linux: bin/linux-x86-64/sonar.sh start	n'oubliez pas le ./ devant sonar.sh start
+- sous macOS: bin/macosx-universal-64/sonar.sh start		n'oubliez pas le ./ devant sonar.sh start
 - sous Windows: bin/windows-x86-64/StartSonar.bat
 
 Vous pouvez accéder à l'interface Web de SonarQube via: http://localhost:9000
@@ -374,7 +374,7 @@ Vous pouvez accéder à l'interface Web de SonarQube via: http://localhost:9000
 Le login et password par défaut est admin.
 
 ## Analyse d'un projet avec SonarQube
-Le projet Gradle que vous utilisez est déjà configuré pour fonctionner avec SonarQube. Il faut simplement que vous gériez l'authentification de votre projet Gradle aupèrs du serveur SonarQube.
+Le projet Gradle que vous utilisez est déjà configuré pour fonctionner avec SonarQube, mais si vous voulez en savoir sur la configuration vous pouvez étudier cela ici: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-gradle/. Il faut simplement que vous gériez l'authentification de votre projet Gradle aupèrs du serveur SonarQube.
 
 Commencez par générer un token d'authentification: https://docs.sonarqube.org/latest/user-guide/user-token/
 
@@ -382,7 +382,7 @@ Puis ouvrez une fenêtre de commande dans le dossier de votre projet et exécute
 - sous Windows : gradlew sonarqube -Dsonar.login=yourAuthenticationToken 
 - sous Linux (ou Mac) : ./gradlew sonarqube -Dsonar.login=yourAuthenticationToken 
 
-Attendez la fin de l'exécution de la commande puis allez voir le résultats de l'analyse dans la page projets de SonarQube. 
+Attendez la fin de l'exécution de la commande puis allez voir le résultat de l'analyse dans la page projets de SonarQube. 
 
 ## Amélioration de la qualité de votre code
 L'onglet issues de SonarQube pour votre projet liste tous les problèmes de votre code :
@@ -391,5 +391,27 @@ L'onglet issues de SonarQube pour votre projet liste tous les problèmes de votr
 
 Parmi ces problèmes repérez ceux de la classe Trains, corrigez les problèmes comme SonarQube vous l'indique, puis relancez l'analyse afin de vérifier que votre code n'a plus de problème.
 
+#Séance 6 : intégration continue
+L'approche CI/CD permet d'augmenter la fréquence de distribution des applications grâce à l'introduction de l'automatisation au niveau des étapes de développement des applications. Les principaux concepts liés à l'approche CI/CD sont l'intégration continue, la distribution continue et le déploiement continu (https://www.redhat.com/fr/topics/devops/what-cicd-pipeline). Un pipeline CI/CD est une série d'étapes à réaliser en vue de distribuer une nouvelle version d'un logiciel : 
 
+![](doc/cicd.png "cicd")
+
+Ici on ne s'intéresse qu'à l'aspect CI. 
+
+## Mettre en place un pipeline d'intégration continue
+Gitlab permet de mettre en place un pipeline d'intégration continue et votre projet est déjà configuré pour utiliser cette fonctionnalité. Pour lancer le pipeline, faites à nouveau un git push de votre projet vers votre dépôt gitlab et allez inspecter l'exécution de votre pipeline dans gitlab : 
+
+![](doc/pipeline.png "pipeline")
+
+L'inspection du fonctionnement du pipeline doit vous donner : 
+
+![](doc/pipelinedetail.png "pipeline détail")
+
+où vous voyez que gitlab a lancé automatiquement la commande ./gradlew build. Ainsi, ce que vous faisiez à la main, en lançant le commande gradlew build (https://gitlab.com/BenOrcha/voyageentrain/-/tree/master#en-ligne-de-commande) est maintenant fait automatoquement par gitlab dès que vous y pousser votre code (d'où le nom intégration CONTINUE).
+
+## La configuration du pipeline
+Pour gitlab, la configuration d'un pipeline se fait dans le fichier https://gitlab.com/BenOrcha/voyageentrain/-/blob/master/.gitlab-ci.yml qui est dans votre projet. Attention ! comme tout fichier dont le nom commence par un point c'est un fichier caché par défaut. Sous Linux, faîtes un ls -all pour voir de fichier. Sous Windows, pour voir ce fichier, il y a une option dans le dossier du projet qui permet de voir les fichiers caché. Dans ce fichier, stages définit les étapes du pipeline (une seule étape ici). Puis chaque étape est décrite. Ainsi l'étape buildAndUnitTesting (qui est associé au stage build par son nom) est ici définit comme devant excécuter le script ./gradlew build.
+
+## Pour aller plus loin
+En général, l'intégration continiue CI est complétré par une livraison continue (Continuous Delivery). Cette desnière étape permet de mettre automqtiquement en production une application (démarrer un serveur de base de données, déployer une application sur un serveur Web...), mais cela dépasse les compétences visées par notre cours. 
 
