@@ -384,3 +384,12 @@ Puis ouvrez une fenêtre de commande dans le dossier de votre projet et exécute
 
 Attendez la fin de l'exécution de la commande puis allez voir le résultats de l'analyse dans la page projets de SonarQube. 
 
+## Amélioration de la qualité de votre code
+L'onglet issues de SonarQube pour votre projet liste tous les problèmes de votre code :
+
+![](doc/sonar.png "sonar")
+
+Parmi ces problèmes repérez ceux de la classe Trains, corrigez les problèmes comme SonarQube vous l'indique, puis relancez l'analyse afin de vérifier que votre code n'a plus de problème.
+
+
+
