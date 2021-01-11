@@ -374,7 +374,9 @@ Vous pouvez accéder à l'interface Web de SonarQube via: http://localhost:9000
 Le login et password par défaut est admin.
 
 ## Analyse d'un projet avec SonarQube
-Le projet Gradle que vous utilisez est déjà configuré pour fonctionner avec SonarQube, mais si vous voulez en savoir sur la configuration vous pouvez étudier cela ici: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-gradle/. Il faut simplement que vous gériez l'authentification de votre projet Gradle aupèrs du serveur SonarQube.
+Le projet Gradle que vous utilisez est déjà configuré pour fonctionner avec SonarQube, mais si vous voulez en savoir sur la configuration vous pouvez étudier cela ici: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-gradle/. 
+
+Ici, il faut simplement que vous gériez l'authentification de votre projet Gradle auprès du serveur SonarQube.
 
 Commencez par générer un token d'authentification: https://docs.sonarqube.org/latest/user-guide/user-token/
 
@@ -391,7 +393,7 @@ L'onglet issues de SonarQube pour votre projet liste tous les problèmes de votr
 
 Parmi ces problèmes repérez ceux de la classe Trains, corrigez les problèmes comme SonarQube vous l'indique, puis relancez l'analyse afin de vérifier que votre code n'a plus de problème.
 
-#Séance 6 : intégration continue
+# Séance 6 : intégration continue
 L'approche CI/CD permet d'augmenter la fréquence de distribution des applications grâce à l'introduction de l'automatisation au niveau des étapes de développement des applications. Les principaux concepts liés à l'approche CI/CD sont l'intégration continue, la distribution continue et le déploiement continu (https://www.redhat.com/fr/topics/devops/what-cicd-pipeline). Un pipeline CI/CD est une série d'étapes à réaliser en vue de distribuer une nouvelle version d'un logiciel : 
 
 ![](doc/cicd.png "cicd")
@@ -410,8 +412,8 @@ L'inspection du fonctionnement du pipeline doit vous donner :
 où vous voyez que gitlab a lancé automatiquement la commande ./gradlew build. Ainsi, ce que vous faisiez à la main, en lançant le commande gradlew build (https://gitlab.com/BenOrcha/voyageentrain/-/tree/master#en-ligne-de-commande) est maintenant fait automatoquement par gitlab dès que vous y pousser votre code (d'où le nom intégration CONTINUE).
 
 ## La configuration du pipeline
-Pour gitlab, la configuration d'un pipeline se fait dans le fichier https://gitlab.com/BenOrcha/voyageentrain/-/blob/master/.gitlab-ci.yml qui est dans votre projet. Attention ! comme tout fichier dont le nom commence par un point c'est un fichier caché par défaut. Sous Linux, faîtes un ls -all pour voir de fichier. Sous Windows, pour voir ce fichier, il y a une option dans le dossier du projet qui permet de voir les fichiers caché. Dans ce fichier, stages définit les étapes du pipeline (une seule étape ici). Puis chaque étape est décrite. Ainsi l'étape buildAndUnitTesting (qui est associé au stage build par son nom) est ici définit comme devant excécuter le script ./gradlew build.
+Pour gitlab, la configuration d'un pipeline se fait dans le fichier https://gitlab.com/BenOrcha/voyageentrain/-/blob/master/.gitlab-ci.yml qui est dans votre projet. Attention ! comme tout fichier dont le nom commence par un point c'est un fichier caché par défaut. Sous Linux, faites un ls -all pour voir le fichier. Sous Windows, pour voir ce fichier, il y a une option dans le dossier du projet qui permet de voir les fichiers cachés. Dans ce fichier, stages définit les étapes du pipeline (une seule étape ici). Puis chaque étape est décrite. Ainsi l'étape buildAndUnitTesting (qui est associé au stage build par son nom) est ici défini comme devant excécuter le script ./gradlew build.
 
 ## Pour aller plus loin
-En général, l'intégration continiue CI est complétré par une livraison continue (Continuous Delivery). Cette desnière étape permet de mettre automqtiquement en production une application (démarrer un serveur de base de données, déployer une application sur un serveur Web...), mais cela dépasse les compétences visées par notre cours. 
+En général, l'intégration continiue CI est complétée par une livraison continue (Continuous Delivery). Cette desnière étape permet de mettre automatiquement en production une application (démarrer un serveur de base de données, déployer une application sur un serveur Web...), mais cela dépasse les compétences visées par notre cours. 
 
