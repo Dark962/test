@@ -347,7 +347,7 @@ Ajouter des nouvelles méthodes à votre classe de test tant que toutes les inst
     	return null;
     }
 # Séance 5 : qualité logiciel avec SonarQube
-Attention ! Cette partie nécessite que vous mettiez à jour votre projet car de nouvelles configurations ont été faites dans le projet de référence. Pour cela, replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain
+Attention ! Cette partie nécessite que vous mettiez à jour votre projet car de nouvelles configurations ont été faites dans le projet de référence. Mais avant tout sauvegardez bien votre travail dans votre projet gitlab en faisant un git push de votre projet local vers votre projet gitlab afin d'y sauvegarder votre code. Ensuite vous pourrez récupérer la mise à jour d projet de référence. Pour cela, replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain. Attention, ce faisant vous récupérez aussi le code du projet de référence et il se peut que vos classes Trains et VoyageEnTrainApplicationTests aient été remplacées. Dans ce cas, vous devrez les remettre à jour en utilisant votre code de votre projet gitlab.
 
 Durant cette séance, vous allez utiliser SonarQube qui est un logiciel libre permettant de mesurer la qualité d'un code source en continu.
 
