@@ -352,6 +352,8 @@ Attention ! Cette partie nécessite que vous mettiez à jour votre projet car de
 Durant cette séance, vous allez utiliser SonarQube qui est un logiciel libre permettant de mesurer la qualité d'un code source en continu.
 
 ## Installation de SonarQube
+Attention ! Seule la version 11 de Java est supportée par Sonar 8.
+
 Ici, c'est la version gratuite (Community) qui est utilisée.
 
 Télécharger et décompresser la version Community: https://www.sonarqube.org/downloads/
