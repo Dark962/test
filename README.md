@@ -353,6 +353,7 @@ Durant cette séance, vous allez utiliser SonarQube qui est un logiciel libre pe
 
 ## Installation de SonarQube
 Attention ! Seule la version 11 de Java est supportée par Sonar 8.
+Afin de vérifier quelle version de Java vous avez sur votre machine, taopez la commande "java -version" dans un terminal.
 
 Ici, c'est la version gratuite (Community) qui est utilisée.
 
