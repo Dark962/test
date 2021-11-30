@@ -101,8 +101,6 @@ public class Trains {
 		if(train.getDateDeDepart().compareTo(dateDep) < 0){
 			trainsTrouves.add(train);
 		}
-
-		trains = null;
 		
     	return trains;
     }
