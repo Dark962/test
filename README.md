@@ -1,20 +1,17 @@
 # voyageEnTrain
 
-Durant les 6 séances restantes de TD/TP de la matière Méthodologie de Production d'Applications vous allez :
-- utiliser Git (partage de code à plusieurs) - séance 1
-- Planifier et suivre le développement d'un projet en méthode agile Scrum avec GitLab - séance 2
-- Tester votre programme (tests unitraires et tests de couverture de code) - séances 3 et 4
-- Utiliser des techniques d'intégration continue - séance 5
-- Amélioration de la qualité de votre projet - séance 6
+Ce projet va vous permettre d'aborder plusieurs aspects de la gestion d'un projet :
+- utiliser Git (partage de code à plusieurs)
+- Planifier et suivre le développement d'un projet en méthode agile Scrum avec GitLab
+- Tester votre programme (tests unitraires et tests de couverture de code)
+- Utiliser des techniques d'intégration continue
+- Amélioration de la qualité de votre projet
 
-# Séance 1 : préparation du projet
-
-Attention ! Si lors du cours vous avez déjà récupéré le projet de référence, le code de ce projet a pu être mis à jour entre temps. Dans ce cas replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain
-
+# Partie 1 : préparation du projet
 
 ## Répartition du travail
 
-Créer des binômes. Les binômes seront conservés jusqu'à la fin des 6 séances.
+Il est préférable de faire ces TP en binôme mais vous pouvez les réaliser seuls.
 
 ## Installation d’un client git
 
@@ -33,7 +30,6 @@ Le principe de git est que chaque développeur a sur sa machine une copie du cod
 - définir le user name : git config --global user.name "Mona Lisa" ou user.name est celui de gitlab
 - définir l'adresse mail : git config --global user.email "email@example.com" ou user.email est celui de gitlab
 
-
 Git est utilisable de deux façons :
 -	Via une interface graphique
 -	Via un terminal en ligne de commande
@@ -43,37 +39,35 @@ La deuxième façon est préférable car elle est absolument portable (vous pour
 ## Télécharger et tester le projet de référence
 Tous les TP à suivre sont basés sur un projet de référence: https://gitlab.com/BenOrcha/voyageentrain
 
-Ce projet utilise la version 11 de Java JDK.
+Ce projet utilise la version 11 de Java JDK, mais toutes les parties, à l'exception de la partie 5 sur la qualité logicielle, peuvent être réalisées avec Java JDK 8.  
 
-Commencer par vérifier quelle est la version de Java sur votre machine. Dans une fenêtre de commande utilisez la commande : java -version
-
-Si besoin, installez sur votre machine Java JDK 11 : https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
+Commencer par vérifier quelle est la version de Java sur votre machine. Dans une fenêtre de commande utilisez la commande : 
+```
+java -version
+```
+Attention ! c'est bien la version JDK qu'il faut utiliser. La version JRE, permet juste d'exécuter du code Java mais pas de le compiler.
+Si besoin, installez sur votre machine Java JDK 11 : https://www.oracle.com/fr/java/technologies/javase/jdk11-archive-downloads.html
 
 Placez-vous alors dans un dossier où vous voulez placer le projet et récupérez-le via la commande : 
-
+```
 git clone https://gitlab.com/BenOrcha/voyageentrain
-
+```
 Cette commande va créer un dossier contenant le projet sur votre machine. Déplacez vous dans ce dossier avant d'utiliser les autres commandes git.
  
-Démarrer une version récente d'Eclipse puis importez-y le projet : Import -> Gradle -> Existing Gradle project 
+Démarrer une version récente d'Eclipse ou d'IntelliJ puis :
+ - importez-y le projet dans Eclipse : Import -> Gradle -> Existing Gradle project ou
+ - ouvrez le projet dans IntelliJ 
 
 ## Uploader le projet de référence vers votre projet Gitlab
 A présent vous dévez uploader ce projet vers votre compte gitlab afin de pouvoir le modifier de votre côté. Pour cela utilisez la commande :
-
+```
 git push --set-upstream https://gitlab.com/BenOrcha/nouveau
-
+```
 où BenOrcha est l'url de votre compte gitlab et nouveau est le nom du projet que vous voulez créer dans gitlab. 
 
 ## Permettre à des collaborateurs d'accéder à votre projet
 A présent vous devez ajouter votre binôme dans le projet gitlab ainsi que le professeur qui vous suit.
 Pour cela accéder à menu members dans gitlab et ajouter votre binôme en tant que Maintainer (role permission) et votre professeur en tant que reporter.
-
-Pour que votre enseignant puisse facilement vous associer à votre projet merci de renseigner dans ces documents l'adresse de votre projet gitlab (chaque étudiant de chaque binôme indique l'adresse du projet commun au binôme) : 
-- groupe jaune : https://drive.google.com/file/d/1CjePfD1pQh7Aubo-PBU6_ObIVDN7-ygH/view?usp=sharing
-- groupoe vert : https://drive.google.com/file/d/1SdFMUew2HAnq4Q52mDUxwiuN85KWAJuy/view?usp=sharing
-- groupe bleu : https://drive.google.com/file/d/1SBcued4m-wlt7U5IszTWkXWxIHcsMhql/view?usp=sharing
-- groupe rouge : https://drive.google.com/file/d/1KayPdlAo79KPXDPkpQCVfv6xnxDa1pWv/view?usp=sharing
-- groupe orange : https://drive.google.com/file/d/1wXdon2_kqqfchqiB5l6jfwEqAOitnlTA/view?usp=sharing
 
 ## Utiliser git
 Dans la suite de ce TP vous allez utiliser git. Vous avez à votre disposition (voir plus bas) un memento des commandes git.
@@ -127,7 +121,7 @@ Ouvrez les fichiers en cause et voyez comment git a conservé les deux versions 
 
 
 ### Mémento git
-
+```
 git clone https://github.com/charroux/jee	Télécharge le projet donné en adresse dans un nouveau dossier portant le nom du projet
 
 git add contenu	Ajoute au dépôt local git le contenu du dossier et du fichier précisé en argument
@@ -145,9 +139,9 @@ git branch nomBranche	Créé une branche de nom nomBranche
 git checkout nomBranche	Se déplace vers la branche de nom nomBranche
 
 git merge nomBranche		Fusionne la branche nomBranche avec la branche sur laquelle on est
+```
 
-
-# Séance 2 : Planification de projets avec la méthode agile SCRUM
+# Partie 2 : Planification de projets avec la méthode agile SCRUM
 
 Soit la copie d’écran d’une maquette d’une application de réservation de billets de train.
 
@@ -203,7 +197,7 @@ Dans le projet de référence (https://gitlab.com/BenOrcha/voyageentrain/-/issue
 Décomposer en tâches la première user story à réaliser dans votre projet.
 
 
-# Séance 3 : spécifier les cas de tests fonctionnel
+# Partie 3 : spécifier les cas de tests fonctionnel
 Attention ! Si lors des séances précédentes vous avez déjà récupéré le projet de référence, le code de ce projet a pu être mis à jour entre temps. Dans ce cas replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain
 
 Dans la suite on se focalise sur la User Story : En tant qu’utilisateur, je veux choisir les dates ainsi que les lieux de départ et d’arrivée de mon voyage afin de déterminer une liste de train qui respectent au mieux mes choix.
@@ -267,7 +261,7 @@ Ajoutez à la matrice de tests des nouvelles colonnes où chaque colonne contien
 ## Evaluation de votre travail
 Ajoutez votre matrice de tests à la page d'accueil ReadMe de votre projet gitlab.
 
-# Séance 4 : développement guidé par les tests
+# Partie 4 : développement guidé par les tests
 Attention ! Si lors du cours vous avez déjà récupéré le projet de référence, le code de ce projet a pu être mis à jour entre temps. Dans ce cas replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain
 
 Votre projet contient déjà une classe de tests : https://gitlab.com/BenOrcha/voyageentrain/-/blob/master/src/test/java/transport/voyageEnTrain/VoyageEnTrainApplicationTests.java
@@ -347,7 +341,7 @@ Ajouter des nouvelles méthodes à votre classe de test tant que toutes les inst
     public ArrayList<Train> chercherTrain(String nomVilleDeDepart, String nomVilleArrivee, String dateDeDepart){
     	return null;
     }
-# Séance 5 : qualité logiciel avec SonarQube
+# Partie 5 : qualité logiciel avec SonarQube
 Attention ! Cette partie nécessite que vous mettiez à jour votre projet car de nouvelles configurations ont été faites dans le projet de référence. Mais avant tout sauvegardez bien votre travail dans votre projet gitlab en faisant un git push de votre projet local vers votre projet gitlab afin d'y sauvegarder votre code. Ensuite vous pourrez récupérer la mise à jour du projet de référence. Pour cela, replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain. Attention, ce faisant vous récupérez aussi le code du projet de référence et il se peut que vos classes Trains et VoyageEnTrainApplicationTests aient été remplacées. Dans ce cas, vous devrez les remettre à jour en utilisant votre code de votre projet gitlab.
 
 Durant cette séance, vous allez utiliser SonarQube qui est un logiciel libre permettant de mesurer la qualité d'un code source en continu.
