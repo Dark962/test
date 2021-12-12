@@ -48,13 +48,19 @@ java -version
 Attention ! c'est bien la version JDK qu'il faut utiliser. La version JRE, permet juste d'exécuter du code Java mais pas de le compiler.
 Si besoin, installez sur votre machine Java JDK 11 : https://www.oracle.com/fr/java/technologies/javase/jdk11-archive-downloads.html
 
-Placez-vous alors dans un dossier où vous voulez placer le projet et récupérez-le via la commande : 
+Si vous utilisez les machines de l'école sous Linux pour télécharger le projet, il vaut mieux éviter d'utiliser les dossiers réseau, et il vaut mieux se mettre sur le dossier tmp. 
+
+Placez-vous alors dans le dossier où vous voulez placer le projet et récupérez-le via la commande : 
 ```
 git clone https://gitlab.com/BenOrcha/voyageentrain
 ```
 Cette commande va créer un dossier contenant le projet sur votre machine. Déplacez vous dans ce dossier avant d'utiliser les autres commandes git.
- 
-Démarrer une version récente d'Eclipse ou d'IntelliJ puis :
+
+Avant d'utiliser Eclipse ou IntelliJ, il faut vérifier la compatibilité entre la version Java du projet (voir la ligne 11 du fichier https://gitlab.com/BenOrcha/voyageentrain/-/blob/master/build.gradle) et s'assurer que c'est la même version que le Java installé sur la machine obtenu avec la commande : 
+```
+java -version
+``` 
+Démarrer ensuite une version récente d'Eclipse ou d'IntelliJ puis :
  - importez-y le projet dans Eclipse : Import -> Gradle -> Existing Gradle project ou
  - ouvrez le projet dans IntelliJ 
 
@@ -342,7 +348,6 @@ Ajouter des nouvelles méthodes à votre classe de test tant que toutes les inst
     	return null;
     }
 # Partie 5 : qualité logiciel avec SonarQube
-Attention ! Cette partie nécessite que vous mettiez à jour votre projet car de nouvelles configurations ont été faites dans le projet de référence. Mais avant tout sauvegardez bien votre travail dans votre projet gitlab en faisant un git push de votre projet local vers votre projet gitlab afin d'y sauvegarder votre code. Ensuite vous pourrez récupérer la mise à jour du projet de référence. Pour cela, replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain. Attention, ce faisant vous récupérez aussi le code du projet de référence et il se peut que vos classes Trains et VoyageEnTrainApplicationTests aient été remplacées. Dans ce cas, vous devrez les remettre à jour en utilisant votre code de votre projet gitlab.
 
 Durant cette séance, vous allez utiliser SonarQube qui est un logiciel libre permettant de mesurer la qualité d'un code source en continu.
 
