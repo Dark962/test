@@ -268,7 +268,6 @@ Ajoutez à la matrice de tests des nouvelles colonnes où chaque colonne contien
 Ajoutez votre matrice de tests à la page d'accueil ReadMe de votre projet gitlab.
 
 # Partie 4 : développement guidé par les tests
-Attention ! Si lors du cours vous avez déjà récupéré le projet de référence, le code de ce projet a pu être mis à jour entre temps. Dans ce cas replacez-vous sur votre machine dans le dossier du projet et faites un : git pull https://gitlab.com/BenOrcha/voyageentrain
 
 Votre projet contient déjà une classe de tests : https://gitlab.com/BenOrcha/voyageentrain/-/blob/master/src/test/java/transport/voyageEnTrain/VoyageEnTrainApplicationTests.java
 
@@ -288,6 +287,12 @@ Un rapport de test a été généré dans le dossier build/reports/tests/test/in
 ### via Eclipse
 
 Faites un clic droit sur votre projet dans Elipse, puis Run as -> JUnit test. Vous pouvez à présent consulter le rapport de test dans Eclipse.
+
+### via IntelliJ
+
+Faites un clic droit sur la classe, puis un "Run".
+
+Vous pouvez à présent consulter le rapport de test HTML qui se trouve dans le dossier: voyageentrain/build/reports/tests/test/
 
 ## Question 1 : tests unitaires avec JUnit
 
