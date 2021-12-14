@@ -69,7 +69,14 @@ A présent vous dévez uploader ce projet vers votre compte gitlab afin de pouvo
 ```
 git push --set-upstream https://gitlab.com/BenOrcha/nouveau
 ```
-où BenOrcha est l'url de votre compte gitlab et nouveau est le nom du projet que vous voulez créer dans gitlab. 
+où BenOrcha est l'url de votre compte gitlab et nouveau est le nom du projet que vous voulez créer dans gitlab.
+
+Si le message suivant apparait : warning: push.default n'est pas défini...
+
+Vous devrez tout d'abord faire la commande suivante avant de relancer le push :
+```
+git config --global push.default simple
+```
 
 ## Permettre à des collaborateurs d'accéder à votre projet
 A présent vous devez ajouter votre binôme dans le projet gitlab ainsi que le professeur qui vous suit.
